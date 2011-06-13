@@ -12,7 +12,7 @@ Set up django-storages-cloudfront
 
 Set the DEFAULT_FILE_STORAGE setting:
 
-DEFAULT_FILE_STORAGE  = 'cloudfront.storages.CouldFrontStorage'
+DEFAULT_FILE_STORAGE  = 'cloudfront.cloudfrontstorage.CouldFrontStorage'
 
 Set the AWS_CLOUDFRONT_DOMAIN setting:
 
