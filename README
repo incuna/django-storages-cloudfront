@@ -1,0 +1,12 @@
+Extend django-storages storages.backends.s3.S3Storage to use a Amazone CloudFront domain for urls.
+
+INSTALLATION
+============
+
+Set the DEFAULT_FILE_STORAGE setting:
+
+DEFAULT_FILE_STORAGE  = 'cloudfront.CouldFrontStorage'
+
+Set the AWS_CLOUDFRONT_DOMAIN setting:
+
+AWS_CLOUDFRONT_DOMAIN = 'sXXXXX.cloudfront.net'
