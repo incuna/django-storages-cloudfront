@@ -1,4 +1,4 @@
-Extend django-storages storages.backends.s3.S3Storage to use a Amazone CloudFront domain for urls.
+Extend django-storages storages.backends.s3.S3Storage to use a Amazon CloudFront domain for urls.
 
 DEPENDENCIES
 ============
