@@ -1,7 +1,8 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+
 setup(
-    name = "cloudfront",
-    packages = ["cloudfront", ],
+    name = "django-storages-cloudfront",
+    packages = find_packages(),
     include_package_data=True,
     install_requires=[
         "django-storages",
