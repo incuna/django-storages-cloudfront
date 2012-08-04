@@ -4,10 +4,10 @@ from S3 import QueryStringAuthGenerator, CallingFormat
 
 AWS_CLOUDFRONT_DOMAIN = getattr(settings, 'AWS_CLOUDFRONT_DOMAIN', None)
 
-class CouldFrontStorage(S3Storage):
+class CloudFrontStorage(S3Storage):
 
     def __init__(self, *args, **kwargs):
-        super(CouldFrontStorage, self).__init__(*args, **kwargs)
+        super(CloudFrontStorage, self).__init__(*args, **kwargs)
 
         if AWS_CLOUDFRONT_DOMAIN:
             try:
@@ -32,11 +32,10 @@ class CouldFrontStorage(S3Storage):
 
     def url(self, name):
        if not AWS_CLOUDFRONT_DOMAIN:
-           return super(CouldFrontStorage, self).url(name)
+           return super(CloudFrontStorage, self).url(name)
 
        name = self._clean_name(name)
        if QUERYSTRING_ACTIVE:
            return self.url_generator.generate_url('GET', '', name)
        else:
            return self.url_generator.make_bare_url('', name)
-
